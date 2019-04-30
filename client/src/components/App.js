@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import { Button } from 'react-bootstrap';
 import { BrowserRouter, Route } from 'react-router-dom';
+import Header from './Header';
 import './App.css';
 
-const Header = () => <h2>Header</h2>
 const Dashboard = () => <h2>Dashboard</h2>
 const SurveyNew = () => <h2>SurveyNew</h2>
 const Landing = () => 
@@ -13,10 +13,6 @@ const Landing = () =>
   </div>
 
   
-  
-
-
-
 class App extends Component {
   render(){
     return(
@@ -24,9 +20,11 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Header/>
-          <Route exact path="/" component={Landing}/>
-          <Route exact path="/surveys" component={Dashboard}/>
-          <Route path="/surveys/new" component={SurveyNew}/>
+          <div className="container">
+            <Route exact path="/" component={Landing}/>
+            <Route exact path="/surveys" component={Dashboard}/>
+            <Route path="/surveys/new" component={SurveyNew}/>
+          </div>
         </div>
       </BrowserRouter>
       </div>
