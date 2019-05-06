@@ -1,19 +1,23 @@
 import React, {Component} from 'react';
 import { Button } from 'react-bootstrap';
 import { BrowserRouter, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
+import Landing from './Landing';
 import Header from './Header';
 import './App.css';
 
+
 const Dashboard = () => <h2>Dashboard</h2>
 const SurveyNew = () => <h2>SurveyNew</h2>
-const Landing = () => 
-  <div>
-    <h1>Feedbackk</h1>
-    <Button variant="primary" href=" /auth/google"> Sign in with Google</Button>
-  </div>
+
 
   
 class App extends Component {
+  componentDidMount(){
+    this.props.fetchUser();
+
+  }
   render(){
     return(
       <div className="App">
@@ -33,4 +37,4 @@ class App extends Component {
 }
   
     
-export default App;
+export default connect(null, actions)(App);
