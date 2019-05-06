@@ -20,4 +20,7 @@ module.exports = (app) => {
     app.get('/api/current_user', (req, res) => {
         res.send(req.user); //passport attaches user object to request
     });
+    app.get('/api/register', (req, res) => {
+        
+    })
 };
