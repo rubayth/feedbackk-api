@@ -1,3 +1,12 @@
 feedbackk api server
 
-Featuring Google OAuth, React Router, Bootstrap
+Featuring:
+    Google OAuth, 
+    React Router,
+    Redux,
+    Passport,
+    Stripe,
+    Express,
+    Mongoose,
+    Axios, 
+    Bootstrap
