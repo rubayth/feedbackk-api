@@ -2,15 +2,25 @@ import React, { Component } from 'react';
 import { Navbar, Nav , NavDropdown} from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import Payments from './Payments';
 
 class Header extends Component {
     dropdown() {
         return (
-            <NavDropdown 
+            <NavDropdown
             alignRight
-            title={this.props.auth.userName || 'Profile'}  
-            id="nav-dropdown"
+            title={
+                <div style={{display:'inline-block'}}>
+                    <img className="profilePic" 
+                        src={this.props.auth.profilePic} 
+                        alt="user pic"
+                    />
+                    {" " + this.props.auth.userName}
+                </div>
+            }  
+            id="collasible-nav-dropdown"
             >
+            
                 <NavDropdown.Item>Action</NavDropdown.Item>
                 <NavDropdown.Item>Another action</NavDropdown.Item>
                 <NavDropdown.Item>Something else here</NavDropdown.Item>
@@ -22,13 +32,24 @@ class Header extends Component {
     renderContent() {
         switch (this.props.auth) {
             case null:  return;
-            case false: return <Nav.Link href="/auth/google">Login with Google</Nav.Link>
-            default:    return this.dropdown()
+            case false: 
+                return (
+                    <Nav className="ml-auto">
+                        <Nav.Link href="/auth/google">Login with Google</Nav.Link>
+                    </Nav>
+                )
+            default:    
+                return (
+                    <Nav className="ml-auto">
+                        <Nav.Item style={{paddingTop:'0.4rem'}}><Payments/></Nav.Item>
+                        {this.dropdown()}
+                    </Nav>
+                )
         }
     }
     render(){
         return (
-            <Navbar bg="primary" expand="lg">
+            <Navbar collapseOnSelect bg="dark" expand="lg" variant="dark">
                 <Navbar.Brand>
                     <Link
                         style={{textDecoration:'none', color:'white'}}
@@ -37,11 +58,9 @@ class Header extends Component {
                     Feedbackk
                     </Link>
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto">
-                        {this.renderContent()}
-                    </Nav>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    {this.renderContent()}
                 </Navbar.Collapse>
             </Navbar>
         );

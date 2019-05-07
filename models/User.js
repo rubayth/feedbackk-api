@@ -3,7 +3,8 @@ const { Schema } = mongoose;
 
 const userSchema = new Schema({
     googleID: String,
-    userName: String
+    userName: String,
+    profilePic: String
 });
 
 mongoose.model('users', userSchema);
