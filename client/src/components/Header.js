@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, Nav , NavDropdown} from 'react-bootstrap';
+import { Navbar, Nav , NavDropdown, Button} from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Payments from './Payments';
@@ -41,7 +41,12 @@ class Header extends Component {
             default:    
                 return (
                     <Nav className="ml-auto">
-                        <Nav.Item style={{paddingTop:'0.4rem'}}><Payments/></Nav.Item>
+                        <Nav.Item style={{margin:'0.4rem'}}>
+                            <Payments/>
+                        </Nav.Item>
+                        <Nav.Item style={{margin:'0.4rem'}}>
+                            <Button variant='info'>Credits: {this.props.auth.credits}</Button>
+                        </Nav.Item>
                         {this.dropdown()}
                     </Nav>
                 )
