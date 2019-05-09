@@ -6,6 +6,7 @@ const passport = require('passport');
 const bp = require('body-parser');
 
 require('./models/User'); //must require this before passport.js (below)
+require('./models/Surveys');
 require('./services/passport');
 
 mongoose.connect(keys.mongoURI);
@@ -24,6 +25,7 @@ app.use(passport.session());
 
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
 
 if(process.env.NODE_ENV === 'production') {
     //express will serve production assets
