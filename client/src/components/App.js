@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
-import { Button } from 'react-bootstrap';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import Landing from './Landing';
 import Header from './Header';
+import Dashboard from './Dashboard';
 import './App.css';
 
 
-const Dashboard = () => <h2>Dashboard</h2>
 const SurveyNew = () => <h2>SurveyNew</h2>
 
 

@@ -20,7 +20,6 @@ class Header extends Component {
             }  
             id="collasible-nav-dropdown"
             >
-            
                 <NavDropdown.Item>Action</NavDropdown.Item>
                 <NavDropdown.Item>Another action</NavDropdown.Item>
                 <NavDropdown.Item>Something else here</NavDropdown.Item>
@@ -58,7 +57,7 @@ class Header extends Component {
                 <Navbar.Brand>
                     <Link
                         style={{textDecoration:'none', color:'white'}}
-                        to={this.props.auth ? './surveys' : '/'} 
+                        to={this.props.auth ? '/surveys' : '/'} 
                     > 
                     Feedbackk
                     </Link>
