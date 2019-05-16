@@ -7,17 +7,14 @@ const Dashboard = () => {
         <div>
             <Button variant="info" 
                 style={{
+                    padding: "0px",
                     position: "fixed",
                     right: "23px",
                     bottom: "23px",
-                    paddingTop: "15px",
-                    marginBottom: 0,
-                    zIndex: 997,
                     borderRadius:"50%",
                     width:"80px",
                     height:"80px",
-                    fontSize:"3rem",
-                    padding: "0px",
+                    fontSize:"2rem",
                 }}
                 >
                 <Link to="/surveys/new">+</Link>
