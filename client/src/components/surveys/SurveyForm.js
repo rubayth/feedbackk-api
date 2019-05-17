@@ -29,7 +29,7 @@ class SurveyForm extends Component{
             <div>
                 <Field label="Survey Title" type='text' name='title' component={SurveyField}/>
                 <Field label="Subject Line" type='text' name='subject' component={SurveyField}/>
-                <Field label="Recipients List" type='text' name='emails' component={SurveyField}/>
+                <Field label="Recipients List" type='text' name='recipients' component={SurveyField}/>
                 <Field label="Email Body" type='text' name='body' content={this.state.code} component={ReduxAce}/>
             </div>
         )
@@ -60,7 +60,7 @@ class SurveyForm extends Component{
 
 const validate = (values) => {
     const errors = {};
-    const { title, body , subject, emails } = values;
+    const { title, body , subject, recipients } = values;
     if (!title) {
         errors.title = 'You must provide a title.'
     }
@@ -70,10 +70,10 @@ const validate = (values) => {
     if (!body) {
         errors.body = 'You must provide a body.'
     }
-    errors.emails=validateEmails(emails || '');
+    errors.recipients=validateEmails(recipients || '');
 
-    if (!emails) {
-        errors.emails = 'You must provide recipients.'
+    if (!recipients) {
+        errors.recipients = 'You must provide recipients.'
     }
     
     

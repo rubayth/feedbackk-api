@@ -1,9 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Button } from 'react-bootstrap';
+import { withRouter } from 'react-router-dom';
 import * as actions from '../../actions';
 
-const SurveyFormReview = ({ onCancel, formValues, submitSurvey }) => {
+const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
     return (
         <div>
             <h1>Review</h1>
@@ -29,7 +30,7 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey }) => {
                 Back
             </Button>
             <Button className="float-right" variant='success' 
-                onClick={() => submitSurvey(formValues)}type="submit">Send!</Button>
+                onClick={() => submitSurvey(formValues, history)}type="submit">Send!</Button>
         </div>
     )
 }
@@ -40,4 +41,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect(mapStateToProps, actions)(SurveyFormReview);
+export default connect(mapStateToProps, actions)(withRouter(SurveyFormReview));

@@ -57,11 +57,14 @@ class Header extends Component {
                 <Navbar.Brand>
                     <Link
                         style={{textDecoration:'none', color:'white'}}
-                        to={this.props.auth ? '/surveys' : '/'} 
+                        to='/' 
                     > 
                     Feedbackk
                     </Link>
                 </Navbar.Brand>
+                <Nav.Item style={{margin:'0.4rem'}}>
+                    <Nav.Link href={this.props.auth ? '/surveys' : '/auth/google'} >Dashboard</Nav.Link>
+                </Nav.Item>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     {this.renderContent()}
