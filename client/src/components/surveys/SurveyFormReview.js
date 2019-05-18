@@ -19,9 +19,10 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
                 </div>
                 <div>
                     <label>Recipients</label>
-                    <div>{formValues.emails}</div>
+                    <div>{formValues.recipients}</div>
                 </div>
                 <div>
+                    
                     <label>Body</label>
                     <div>{formValues.body}</div>
                 </div>

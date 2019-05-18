@@ -3,11 +3,8 @@ import { reduxForm, Field } from 'redux-form';
 import { Form, Button } from 'react-bootstrap';
 import SurveyField from './SurveyField';
 import { Link } from 'react-router-dom';
-import ReduxAce from './ReduxAce';
-import AceEditor from 'react-ace';
+import SurveyTextArea from './SurveyTextArea';
 import validateEmails from '../../utils/validateEmails';
-import "brace/mode/html";
-import "brace/theme/monokai";
 
 
 class SurveyForm extends Component{
@@ -18,19 +15,13 @@ class SurveyForm extends Component{
         }
     }
 
-
-    onCodeChange = (code) => {
-        this.setState({code})
-       // ReactTestUtils.Simulate.click(this.inputElement);
-    }
-
     renderFields(){
         return(
             <div>
                 <Field label="Survey Title" type='text' name='title' component={SurveyField}/>
                 <Field label="Subject Line" type='text' name='subject' component={SurveyField}/>
                 <Field label="Recipients List" type='text' name='recipients' component={SurveyField}/>
-                <Field label="Email Body" type='text' name='body' content={this.state.code} component={ReduxAce}/>
+                <Field label="Body" type='text' name='body' component={SurveyTextArea}/>
             </div>
         )
     }
@@ -39,14 +30,6 @@ class SurveyForm extends Component{
             <div>
                 <Form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
                     {this.renderFields()}
-                    <AceEditor
-                    className="center"
-                    mode="html"
-                    onChange={this.onCodeChange}
-                    value={this.state.code}
-                    theme="monokai"
-                    editorProps={{ $blockScrolling: true }}
-  />
                     <Button className="" variant='danger'>
                         <Link to="/surveys">Cancel</Link>
                     </Button>
@@ -60,7 +43,7 @@ class SurveyForm extends Component{
 
 const validate = (values) => {
     const errors = {};
-    const { title, body , subject, recipients } = values;
+    const { title, body, subject, recipients } = values;
     if (!title) {
         errors.title = 'You must provide a title.'
     }
