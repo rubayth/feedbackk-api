@@ -509,8 +509,8 @@ body{background-color:#f0f0f0}.logo a:hover,.logo a:focus{color:#859bb1 !importa
         
             <div style="Margin-left: 20px;Margin-right: 20px;">
       <div class="btn btn--flat btn--large" style="Margin-bottom: 20px;text-align: center;">
-        <![if !mso]><a style="border-radius: 4px;display: inline-block;font-size: 14px;font-weight: bold;line-height: 24px;padding: 12px 24px;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #ffffff !important;background-color: #80bf2e;font-family: Ubuntu, sans-serif;" href="${keys.redirectDomain}/api/surveys/thanks">YES</a><![endif]>
-      <!--[if mso]><p style="line-height:0;margin:0;">&nbsp;</p><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="${keys.redirectDomain}/api/surveys/thanks"" style="width:76px" arcsize="9%" fillcolor="#80BF2E" stroke="f"><v:textbox style="mso-fit-shape-to-text:t" inset="0px,11px,0px,11px"><center style="font-size:14px;line-height:24px;color:#FFFFFF;font-family:Ubuntu,sans-serif;font-weight:bold;mso-line-height-rule:exactly;mso-text-raise:4px">YES</center></v:textbox></v:roundrect><![endif]--></div>
+        <![if !mso]><a style="border-radius: 4px;display: inline-block;font-size: 14px;font-weight: bold;line-height: 24px;padding: 12px 24px;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #ffffff !important;background-color: #80bf2e;font-family: Ubuntu, sans-serif;" href="${keys.redirectDomain}/api/surveys/${survey.id}/yes">YES</a><![endif]>
+      <!--[if mso]><p style="line-height:0;margin:0;">&nbsp;</p><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="${keys.redirectDomain}/api/surveys/${survey.id}/yes"" style="width:76px" arcsize="9%" fillcolor="#80BF2E" stroke="f"><v:textbox style="mso-fit-shape-to-text:t" inset="0px,11px,0px,11px"><center style="font-size:14px;line-height:24px;color:#FFFFFF;font-family:Ubuntu,sans-serif;font-weight:bold;mso-line-height-rule:exactly;mso-text-raise:4px">YES</center></v:textbox></v:roundrect><![endif]--></div>
     </div>
         
             <div style="Margin-left: 20px;Margin-right: 20px;">
@@ -519,8 +519,8 @@ body{background-color:#f0f0f0}.logo a:hover,.logo a:focus{color:#859bb1 !importa
         
             <div style="Margin-left: 20px;Margin-right: 20px;">
       <div class="btn btn--flat btn--large" style="Margin-bottom: 20px;text-align: center;">
-        <![if !mso]><a style="border-radius: 4px;display: inline-block;font-size: 14px;font-weight: bold;line-height: 24px;padding: 12px 24px;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #ffffff !important;background-color: #80bf2e;font-family: Ubuntu, sans-serif;" href="${keys.redirectDomain}/api/surveys/thanks">NO</a><![endif]>
-      <!--[if mso]><p style="line-height:0;margin:0;">&nbsp;</p><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="${keys.redirectDomain}/api/surveys/thanks"" style="width:69px" arcsize="9%" fillcolor="#80BF2E" stroke="f"><v:textbox style="mso-fit-shape-to-text:t" inset="0px,11px,0px,11px"><center style="font-size:14px;line-height:24px;color:#FFFFFF;font-family:Ubuntu,sans-serif;font-weight:bold;mso-line-height-rule:exactly;mso-text-raise:4px">NO</center></v:textbox></v:roundrect><![endif]--></div>
+        <![if !mso]><a style="border-radius: 4px;display: inline-block;font-size: 14px;font-weight: bold;line-height: 24px;padding: 12px 24px;text-align: center;text-decoration: none !important;transition: opacity 0.1s ease-in;color: #ffffff !important;background-color: #80bf2e;font-family: Ubuntu, sans-serif;" href="${keys.redirectDomain}/api/surveys/${survey.id}/yes">NO</a><![endif]>
+      <!--[if mso]><p style="line-height:0;margin:0;">&nbsp;</p><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="${keys.redirectDomain}/api/surveys/${survey.id}/no"" style="width:69px" arcsize="9%" fillcolor="#80BF2E" stroke="f"><v:textbox style="mso-fit-shape-to-text:t" inset="0px,11px,0px,11px"><center style="font-size:14px;line-height:24px;color:#FFFFFF;font-family:Ubuntu,sans-serif;font-weight:bold;mso-line-height-rule:exactly;mso-text-raise:4px">NO</center></v:textbox></v:roundrect><![endif]--></div>
     </div>
         
             <div style="Margin-left: 20px;Margin-right: 20px;">
