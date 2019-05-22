@@ -3,7 +3,7 @@ import { Navbar, Nav , NavDropdown, Button} from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Payments from './Payments';
-
+import logo from '../assets/feedbackkLogo.png'
 class Header extends Component {
     dropdown() {
         return (
@@ -28,7 +28,7 @@ class Header extends Component {
             </NavDropdown>
         )
     }
-    renderContent() {
+    renderRightNav() {
         switch (this.props.auth) {
             case null:  return;
             case false: 
@@ -51,6 +51,22 @@ class Header extends Component {
                 )
         }
     }
+    
+    renderLeftNav() {
+        switch (this.props.auth) {
+            case null:  return;
+            case false: 
+                return ;
+            default:    
+                return (
+                    <Nav className="mr-auto">
+                        <Nav.Item>
+                            <Link to='/surveys'>Dashboard</Link>
+                        </Nav.Item>
+                    </Nav>
+                )
+        }
+    }
     render(){
         return (
             <Navbar collapseOnSelect bg="dark" expand="lg" variant="dark">
@@ -59,15 +75,18 @@ class Header extends Component {
                         style={{textDecoration:'none', color:'white'}}
                         to='/' 
                     > 
-                    Feedbackk
+                    <img src={logo}
+                        width="90"
+                        height="auto"
+                        className="d-inline-block align-top"
+                        alt="Logo"
+                    />
                     </Link>
                 </Navbar.Brand>
-                <Nav.Item style={{margin:'0.4rem'}}>
-                    <Nav.Link href={this.props.auth ? '/surveys' : '/auth/google'} >Dashboard</Nav.Link>
-                </Nav.Item>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                    {this.renderContent()}
+                    {this.renderLeftNav()}
+                    {this.renderRightNav()}
                 </Navbar.Collapse>
             </Navbar>
         );

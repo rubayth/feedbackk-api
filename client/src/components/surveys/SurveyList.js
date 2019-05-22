@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
-import { fetchSurveys } from '../../actions';
-import { connect } from 'react-redux';
 import { Card } from 'react-bootstrap';
 
 class SurveyList extends Component{
-    componentDidMount() {
-        this.props.fetchSurveys();
-    }
 
     renderSurveys() {
         return this.props.surveys.reverse().map(survey => {
             return (
-                <Card style={{ }}>
+                <Card key={survey._id} style={{ }}>
                     <Card.Body>
                         <Card.Title>{survey.title}</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">Sent: {new Date(survey.dateSent).toLocaleDateString()}</Card.Subtitle>
@@ -36,7 +31,5 @@ class SurveyList extends Component{
     }
 }
 
-function mapStateToProps({ surveys }) {
-    return {surveys};
-}
-export default connect(mapStateToProps, { fetchSurveys })(SurveyList)
+
+export default SurveyList;

@@ -8,13 +8,6 @@ import validateEmails from '../../utils/validateEmails';
 
 
 class SurveyForm extends Component{
-    constructor() {
-        super();
-        this.state = {
-            code: ""
-        }
-    }
-
     renderFields(){
         return(
             <div>
@@ -30,8 +23,8 @@ class SurveyForm extends Component{
             <div>
                 <Form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
                     {this.renderFields()}
-                    <Button className="" variant='danger'>
-                        <Link to="/surveys">Cancel</Link>
+                    <Button variant='danger'>
+                        <Link className='d-block' to="/surveys">Cancel</Link>
                     </Button>
                     <Button className="float-right" type="submit">Next</Button>
                 </Form>

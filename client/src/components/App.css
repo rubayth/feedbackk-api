@@ -33,3 +33,23 @@ a:hover{
     margin-left: calc(-100vw / 2 + 500px / 2);
     margin-right: calc(-100vw / 2 + 500px / 2);
   }
+
+.landing {
+    background: url('../assets/landing.jpg');
+    background-size: cover;
+    height: 90vh;
+    position: relative;
+    color: aliceblue;
+}
+
+.title{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding:5rem;
+}
+
+.my-dark{
+    background-color:rgb(52,58,64,0.8);
+}
