@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
+import SurveyList from './surveys/SurveyList';
 
 const Dashboard = () => {
     return (
         <div>
+            <SurveyList/>
             <Button variant="info" 
                 style={{
                     padding: "0px",

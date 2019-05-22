@@ -9,7 +9,7 @@ require('./models/User'); //must require this before passport.js (below)
 require('./models/Surveys');
 require('./services/passport');
 
-mongoose.connect(keys.mongoURI);
+mongoose.connect(keys.mongoURI, { useNewUrlParser: true });
 
 const app = express();
 
@@ -36,5 +36,6 @@ if(process.env.NODE_ENV === 'production') {
         res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
     })
 }
+
 app.listen(process.env.PORT || 5000);
 
