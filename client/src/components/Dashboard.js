@@ -19,7 +19,8 @@ const Dashboard = () => {
                     fontSize:"2rem",
                 }}
                 >
-                <Link to="/surveys/new">+</Link>
+                <Link style={{display: 'block',}}
+                    to="/surveys/new">+</Link>
             </Button>
         </div>
     )
