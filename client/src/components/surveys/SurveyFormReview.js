@@ -5,6 +5,7 @@ import { withRouter } from 'react-router-dom';
 import * as actions from '../../actions';
 
 const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
+    console.log(formValues);
     return (
         <div>
             <h1>Review</h1>
@@ -25,6 +26,11 @@ const SurveyFormReview = ({ onCancel, formValues, submitSurvey, history }) => {
                     
                     <label>Body</label>
                     <div>{formValues.body}</div>
+                </div>
+                <div>
+                    
+                    <label>Template</label>
+                    <div>{formValues.template}</div>
                 </div>
             </div>
             <Button className="" variant='danger' onClick={onCancel}>

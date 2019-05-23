@@ -19,7 +19,7 @@ class Dashboard extends Component {
                     <h1>Create your first campaign</h1>
                     <p>Campaigns are emails you share with your recipients.</p>
                     <Button variant='info' style={{width:'10rem'}}
-                        > <Link to="/surveys/new">Create a campaign</Link>
+                        > <Link className='d-block' to="/surveys/new">Create a campaign</Link>
                     </Button>
                 </Jumbotron>
                 );

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form'; 
 import { Form, Button } from 'react-bootstrap';
-import SurveyField from './SurveyField';
+import SurveyField from './fieldComponents/SurveyField';
 import { Link } from 'react-router-dom';
-import SurveyTextArea from './SurveyTextArea';
+import SurveyTextArea from './fieldComponents/SurveyTextArea';
 import validateEmails from '../../utils/validateEmails';
 
 
