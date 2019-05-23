@@ -20,10 +20,14 @@ class Header extends Component {
             }  
             id="collasible-nav-dropdown"
             >
-                <NavDropdown.Item>Action</NavDropdown.Item>
-                <NavDropdown.Item>Another action</NavDropdown.Item>
-                <NavDropdown.Item>Something else here</NavDropdown.Item>
-                <NavDropdown.Divider />
+                {
+                    /*
+                    <NavDropdown.Item>Action</NavDropdown.Item>
+                    <NavDropdown.Item>Another action</NavDropdown.Item>
+                    <NavDropdown.Item>Something else here</NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    */
+                }
                 <NavDropdown.Item href='/api/logout'>Logout</NavDropdown.Item>
             </NavDropdown>
         )

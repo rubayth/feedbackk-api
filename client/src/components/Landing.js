@@ -18,7 +18,7 @@ class Landing extends React.Component {
                         </Button>
                     : 
                         <Button variant='info' style={{width:'10rem'}}>
-                            <Link to='/surveys'>Dashboard</Link>
+                            <Link style={{display:'block'}} to='/surveys'>Dashboard</Link>
                         </Button>
                     }
                 </Jumbotron>
