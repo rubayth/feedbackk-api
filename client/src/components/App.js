@@ -8,9 +8,6 @@ import Dashboard from './Dashboard';
 import SurveyNew from './surveys/SurveyNew';
 import './App.css';
 
-
-
-  
 class App extends Component {
   componentDidMount(){
     this.props.fetchUser();
@@ -18,16 +15,15 @@ class App extends Component {
   }
   render(){
     return(
-      <div className="App">
+      <div>
       <BrowserRouter>
-        <div>
           <Header/>
+          <Route exact path="/" component={Landing}/>
           <div className="container">
-            <Route exact path="/" component={Landing}/>
+            
             <Route exact path="/surveys" component={Dashboard}/>
             <Route path="/surveys/new" component={SurveyNew}/>
           </div>
-        </div>
       </BrowserRouter>
       </div>
     );

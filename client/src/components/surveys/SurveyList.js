@@ -4,7 +4,7 @@ import { Card } from 'react-bootstrap';
 class SurveyList extends Component{
 
     renderSurveys() {
-        return this.props.surveys.reverse().map(survey => {
+        return this.props.surveys.surveys.reverse().map(survey => {
             return (
                 <Card key={survey._id} style={{ }}>
                     <Card.Body>

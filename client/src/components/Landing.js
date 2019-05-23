@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 class Landing extends React.Component {
     render(){
         return (
-            <section className='full-width landing'>
+            <section className='landing'>
                 <Jumbotron className = 'title my-dark'>
                     <h1>You need feedback from your users.</h1>
                     <h1>Now what?</h1>

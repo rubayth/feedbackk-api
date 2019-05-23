@@ -69,7 +69,7 @@ class Header extends Component {
     }
     render(){
         return (
-            <Navbar collapseOnSelect bg="dark" expand="lg" variant="dark">
+            <Navbar style={{}} className='' collapseOnSelect bg="dark" expand="lg" variant="dark">
                 <Navbar.Brand>
                     <Link
                         style={{textDecoration:'none', color:'white'}}

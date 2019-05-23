@@ -1,3 +1,12 @@
+@media screen and (max-width: 800px) {
+    h1 {
+      font-size: 12pt;
+    }
+    html{
+        font-size:10pt;
+    }
+  }
+  
 .profilePic{
     width:2rem;
     height:auto;

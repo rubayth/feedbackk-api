@@ -12,10 +12,9 @@ class Dashboard extends Component {
     }
 
     renderContent() {
-        console.log(this.props.fetchSurveys);
-        switch(this.props.surveys.length) {
+        switch(!this.props.surveys.isPending && this.props.surveys.surveys.length===0) {
             case null: return;
-            case 0: return (
+            case true: return (
                 <Jumbotron className = 'title'>
                     <h1>Create your first campaign</h1>
                     <p>Campaigns are emails you share with your recipients.</p>
