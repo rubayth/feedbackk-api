@@ -54,7 +54,7 @@ module.exports = app => {
     })
 
     app.post('/api/surveys', requireLogin, requireCredits, async (req, res) => {
-        const { title, subject, body, recipients } = req.body;
+        const { title, subject, body, recipients, template } = req.body;
 
         const survey = new Survey({
             title,
@@ -65,7 +65,7 @@ module.exports = app => {
             dateSent: Date.now()
         })
 
-        const mailer = new Mailer(survey, surveyTemplate(survey));
+        const mailer = new Mailer(survey, surveyTemplate(survey, template));
 
         try {
             await mailer.send();
