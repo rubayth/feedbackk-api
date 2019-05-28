@@ -6,12 +6,12 @@ class SurveyList extends Component{
     renderSurveys() {
         return this.props.surveys.surveys.reverse().map(survey => {
             return (
-                <Card key={survey._id} style={{ }}>
+                <Card className='mt-2' key={survey._id} style={{ }}>
                     <Card.Body>
                         <Card.Title>{survey.title}</Card.Title>
                         <Card.Subtitle className="mb-2 text-muted">Sent: {new Date(survey.dateSent).toLocaleDateString()}</Card.Subtitle>
                         <Card.Text>
-                        {survey.body}
+                            {survey.body}
                         </Card.Text>
                     </Card.Body>
                     <Card.Body>
